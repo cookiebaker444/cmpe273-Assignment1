@@ -12,7 +12,7 @@ def listen_forever():
     #os.chdir(path)
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind(("", UDP_PORT))
-    with open("./result.txt", "a") as f:
+    with open("./udp_sever_out.txt", "a") as f:
         while True:
         # get the data sent to us
             data, ip = s.recvfrom(BUFFER_SIZE)
